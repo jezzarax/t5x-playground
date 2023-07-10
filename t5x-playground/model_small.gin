@@ -1,0 +1,11 @@
+include '../t5x/t5x/examples/t5/byt5/small.gin'
+include '../t5x/t5x/configs/runs/pretrain.gin'
+
+# Register necessary SeqIO Tasks/Mixtures.
+import t5xpg
+
+MIXTURE_OR_TASK_NAME = "wikitext_span_corruption"
+TASK_FEATURE_LENGTHS = {"inputs": 1024, "targets": 1024}
+TRAIN_STEPS = 20000
+DROPOUT_RATE = 0.01
+BATCH_SIZE = 4
